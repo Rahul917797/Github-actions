@@ -38,6 +38,7 @@ jobs:
       - name: Deploy NGINX app
         run: |
           kubectl apply -f dep.yaml
+          kubectl apply -f svc.yaml
 
       - name: Verify deployment rollout
         run: |
