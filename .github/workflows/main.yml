@@ -44,6 +44,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
+          cd simple-java-maven-app
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
